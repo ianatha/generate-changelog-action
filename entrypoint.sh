@@ -1,7 +1,7 @@
 #!/bin/sh -l
 # shellcheck disable=SC2039
 
-git clone --quiet https://github.com/"$REPO"
+git clone --quiet https://$GITHUB_TOKEN@github.com/"$REPO"
 
 if [ "$REPO" = "ScottBrenner/generate-changelog-action" ]; then
   cd generate-changelog-action || exit
