@@ -1,6 +1,8 @@
 #!/bin/sh -l
 # shellcheck disable=SC2039
 
+cd $GITHUB_WORKSPACE
+
 if [ "$1" ] && [ "$1" != "package.json" ]; then
   cp "$1" package.json
 fi
